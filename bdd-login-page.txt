@@ -1,0 +1,88 @@
+Funcionalidade: Validar página de login na Growth Station
+  Como um usuário
+  Eu quero ser capaz de fazer login na Growth Station
+  Para que eu possa acessar minha conta
+
+  Cenário: Sucesso no login
+    Dado que estou na página de login da Growth Station
+    Quando eu preencho o campo de email com um email válido
+    E eu preencho o campo de senha com uma senha válida
+    E eu clico no botão de entrar
+    Então eu devo ser redirecionado para a página inicial da minha conta
+
+  Cenário: Falha no login com email em branco
+    Dado que estou na página de login da Growth Station
+    Quando eu deixo o campo de email em branco
+    E eu preencho o campo de senha com uma senha válida
+    E eu clico no botão de entrar
+    Então eu devo ver a mensagem de erro "*E-mail ou senha inválidos"
+
+  Cenário: Falha no login com senha em branco
+    Dado que estou na página de login da Growth Station
+    Quando eu preencho o campo de email com um email válido
+    E eu deixo o campo de senha em branco
+    E eu clico no botão de entrar
+    Então eu devo ver a mensagem de erro "*E-mail ou senha inválidos"
+
+  Cenário: Falha no login com email inválido
+    Dado que estou na página de login da Growth Station
+    Quando eu preencho o campo de email com um email inválido
+    E eu preencho o campo de senha com uma senha válida
+    E eu clico no botão de entrar
+    Então eu devo ver a mensagem de erro "*E-mail ou senha inválidos"
+
+  Cenário: Falha no login com senha inválida
+    Dado que estou na página de login da Growth Station
+    Quando eu preencho o campo de email com um email válido
+    E eu preencho o campo de senha com uma senha inválida
+    E eu clico no botão de entrar
+    Então eu devo ver a mensagem de erro "*E-mail ou senha inválidos"
+
+  Cenário: Falha no login com email e senha em branco
+    Dado que estou na página de login da Growth Station
+    Quando eu deixo o campo de email em branco
+    E eu deixo o campo de senha em branco
+    E eu clico no botão de entrar
+    Então eu devo ver a mensagem de erro "*E-mail ou senha inválidos"
+
+  Cenário: "Não é Cliente"
+    Dado que estou na página de login da Growth Station
+    Quando eu clico no botão "Não é Cliente"
+    Então eu devo ser redirecionado para a página principal da Growth Machine
+
+  Cenário: Sucesso ao visualizar a senha
+    Dado que estou na página de login da Growth Station
+    Quando eu preencho o campo de senha
+    E eu clico no ícone do olho no campo de senha
+    Então eu devo ser capaz de ver a senha que digitei
+
+  Cenário: Sucesso ao ocultar a senha
+    Dado que estou na página de login da Growth Station
+    E eu já cliquei no ícone do olho no campo de senha
+    Quando eu clico novamente no ícone do olho no campo de senha
+    Então minha senha deve voltar a ser ocultada
+
+  Cenário: Redirecionamento para a página de recuperação de senha
+    Dado que estou na página de login da Growth Station
+    Quando eu clico no link "Esqueceu a senha?"
+    Então eu devo ser redirecionado para a página de recuperação de senha
+
+
+
+Funcionalidade: Recuperar senha
+  Como um usuário
+  Eu quero ser capaz de recuperar minha senha
+  Para realizar o login, caso necessário
+  Cenário: Solicitação de recuperação de senha com sucesso
+
+    Dado que estou na página de recuperação de senha da Growth Station
+    Quando eu preencho o campo de email com um email válido
+    E eu clico no botão de enviar
+    Então eu devo receber um email com instruções para redefinir minha senha
+    E eu devo ver a mensagem de sucesso "Email enviado com sucesso!"
+
+  Cenário: Solicitação de recuperação de senha com email não registrado
+    Dado que estou na página de recuperação de senha da Growth Station
+    Quando eu preencho o campo de email com um email que não está registrado
+    E eu clico no botão de enviar
+    Então eu devo ver a mensagem de erro "Usuário não encontrado"

@@ -1,0 +1,52 @@
+Funcionalidade: Acesso e manipulação do Playbook na Growth Station
+
+  Cenário: Acesso de um usuário membro
+    Dado que o usuário é um membro
+    E que esteja na página de login da Growth Station
+    E preencha o campo de email com um email válido
+    E preencha o campo de senha com uma senha válida
+    E clique no botão de entrar
+    Quando ele acessar a página do Playbook
+    Então ele deve ser capaz de visualizar as informações do Playbook
+    E não deve ser capaz de editar as informações do Playbook
+
+  Cenário: Acesso de um usuário administrador
+    Dado que o usuário é um administrador
+    E que esteja na página de login da Growth Station
+    E preencha o campo de email com um email válido
+    E preencha o campo de senha com uma senha válida
+    E clique no botão de entrar
+    Quando ele acessar a página do Playbook
+    Então ele deve ser capaz de visualizar as informações do Playbook
+    E deve ser capaz de editar as informações do Playbook
+
+  Cenário: Edição de dados por um usuário administrador
+    Dado que o usuário é um administrador
+    E que esteja na página de login da Growth Station
+    E preencha o campo de email com um email válido
+    E preencha o campo de senha com uma senha válida
+    E clique no botão de entrar
+    E acesse a página do Playbook
+    Quando ele habilitar o modo de edição
+    E ele editar algumas informações
+    Então as informações devem ser salvas automaticamente
+    E quando ele atualizar a pagina
+    Então as informações editadas devem ser exibidas corretamente
+
+  Cenário: Navegação pelos tópicos
+    Dado que o usuário esteja na página de login da Growth Station
+    E preencha o campo de email com um email válido
+    E preencha o campo de senha com uma senha válida
+    E clique no botão de entrar
+    E acesse a página do Playbook
+    Quando ele clicar em um tópico na barra lateral esquerda
+    Então ele deve ser redirecionado para a parte do Playbook referente ao tópico selecionado
+
+  Cenário: Pesquisa por palavras-chave
+    Dado que o usuário esteja na página de login da Growth Station
+    E preencha o campo de email com um email válido
+    E preencha o campo de senha com uma senha válida
+    E clique no botão de entrar
+    E acesse a página do Playbook
+    Quando ele inserir uma palavra-chave no campo de pesquisa
+    Então somente os tópicos que contêm a palavra-chave devem ser exibidos
