@@ -10,6 +10,7 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
 1. [Node.js](https://nodejs.org/) (versão 20.11.28 ou superior)
 2. [npm](https://www.npmjs.com/) (gerenciador de pacotes do Node.js)
+3. [Cypress](https://www.cypress.io)
 
 ### Instalação das Dependências
 
