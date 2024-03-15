@@ -35,7 +35,7 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
 Os testes automatizados estão localizados na pasta `cypress/integration`. Eles foram escritos em TypeScript e incluem os arquivos `loginPage.spec.ts` e `playbook.spec.ts`.
 
-Para executar os testes, utilize o seguinte comando:
+Para executar os testes, você pode utilizar os seguintes comandos:
 
 ```bash
 npx cypress open (abrir a ferramenta do cypress)
@@ -47,7 +47,7 @@ npx cypress run (rodar os testes no terminal)
 
 ## Testes Manuais em BDD
 
-Os roteiros de testes manuais em BDD estão disponíveis nos arquivos `bdd-login-page.txt` e `bdd-Playbook.txt`. Eles fornecem instruções detalhadas para testes manuais específicos.
+Os roteiros de testes manuais em BDD estão disponíveis nos arquivos `bdd-login-page.txt` e `bdd-Playbook.txt`. Eles fornecem instruções detalhadas dos testes manuais.
 
 ## Ignorando Arquivos
 
